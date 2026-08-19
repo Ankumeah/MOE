@@ -19,7 +19,7 @@ class Store {
   constructor() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
     this.dbPath = path.join(DATA_DIR, 'db.json');
-    this.keysPath = path.join(DATA_DIR, 'secrets.json');
+    this.keysPath = path.join("/etc", "secrets", 'secrets.json');
     this.db = { settings: null, history: [] };
     this.keys = {};
     this._load();

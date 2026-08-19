@@ -1,5 +1,3 @@
-// Thin fetch wrapper. All secrets stay on the backend — the browser only ever
-// talks to same-origin routes exposed by server/index.js.
 async function api(path, options) {
   const opts = options || {};
   opts.headers = Object.assign({ 'Content-Type': 'application/json' }, opts.headers || {});
