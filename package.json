@@ -1,0 +1,25 @@
+{
+  "name": "moe-ai",
+  "version": "1.0.0",
+  "description": "MoE AI — a visual, educational demonstration of a Mixture-of-Experts AI system with a secure backend, configurable LLM providers and an honest metrics engine.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "moe",
+    "mixture-of-experts",
+    "llm",
+    "ai",
+    "router"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "gpt-tokenizer": "^2.5.1"
+  }
+}
