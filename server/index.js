@@ -14,13 +14,13 @@ const { demoAnswer } = require('./demo');
 
 const app = express();
 app.use(express.json({ limit: '1mb' }));
-app.use(express.static(path.join(__dirname, '..', 'public')), {
+app.use(express.static(path.join(__dirname, '..', 'public'), {
   setHeaders: (res, path) => {
     if (path.endsWith('.js')) {
       res.setHeader('Content-Type', 'application/javascript');
     }
   }
-});
+}));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const uid = () => `q_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
